@@ -1,0 +1,4 @@
+Patton,George,1-800-america,USA
+Eisenhower,Dwight,1-900-america,USA
+Hitler,Adolf,1-666-nazi,Germany
+Winston,Churchill,1-800-england,UK
