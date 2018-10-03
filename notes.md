@@ -79,7 +79,7 @@ done
 for < var > in < array >
 do
  < block >
-end
+done
 
 Note to loop through associative array ${array[@]} will return the values of the array and ${!array[@]} will return the keys of the array.
 
