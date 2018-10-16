@@ -1,11 +1,11 @@
 # Notes on Bash Programming
 ## Operators
-* - ${< var >-< arg >} Returns arg if var not set
-* :- ${< var >-< arg >} Returns arg if var not set OR empty
-* = ${< var >=< arg >} Returns arg and sets var if var not set
-* := ${< var >:=< arg >} Returns arg and set var if var not set OR var empty
-* + ${< var >+< arg >} Returns arg if var is set if not returns nothing
-* ? ${< var >?< message >} Crashes process if var is not set
+* - `${< var >-< arg >}`     Returns arg if var not set
+* :- `${< var >-< arg >}`    Returns arg if var not set OR empty
+* = `${< var >=< arg >}`     Returns arg and sets var if var not set
+* := `${< var >:=< arg >}`   Returns arg and set var if var not set OR var empty
+* + `${< var >+< arg >}`     Returns arg if var is set if not returns nothing
+* ? `${< var >?< message >}` Crashes process if var is not set
 
 ## Scope
 Variables are scoped to process.
@@ -60,15 +60,26 @@ fi
 
 ### Case
 case < arg > in 
+
 < pattern1 >)
+
  < case body >
+
  ;;
+
 < pattern2 >)
+
  < case body >
+
  ;;
+
  < default case body >
+
 ;;
+\*)
+
 esac
+
 
 ### While
 while < condition >
