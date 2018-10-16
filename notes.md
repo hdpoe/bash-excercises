@@ -66,7 +66,6 @@ case < arg > in
 < pattern2 >)
  < case body >
  ;;
-*)
  < default case body >
 ;;
 esac
@@ -90,20 +89,21 @@ Note to loop through associative array ${array[@]} will return the values of the
 
 #### File Tests
 test will perform a conditional check
+
 Test also can be expressed as [ args ]
 
-test -e < file > true if file/directory exists.
-test -f < file > true if file exists and is regular file.
-test -d < file > true if file exists and is directory.
-test -L < file > true if file exists and is symbolic link.
-test -h < file > true if file exists and is symbolic link.
-test -r < file > true if file exists and is readable.
-test -w < file > true if file exists and is writable.
-test -x < file > true if file exists and is executable.
-test -s < file > true if file exists and is not empty.
-test < file1> -nt < file2> true if file1 is newer than file2.
-test < file1> -ot < file2> true if file1 is older than file2.
-test < file1> -ef < file2> true if file1 and file2 refrence the same inode.
+* test -e < file > true if file/directory exists.
+* test -f < file > true if file exists and is regular file.
+* test -d < file > true if file exists and is directory.
+* test -L < file > true if file exists and is symbolic link.
+* test -h < file > true if file exists and is symbolic link.
+* test -r < file > true if file exists and is readable.
+* test -w < file > true if file exists and is writable.
+* test -x < file > true if file exists and is executable.
+* test -s < file > true if file exists and is not empty.
+* test < file1> -nt < file2> true if file1 is newer than file2.
+* test < file1> -ot < file2> true if file1 is older than file2.
+* test < file1> -ef < file2> true if file1 and file2 refrence the same inode.
 
 #### String Tests
 test -z < string > true if string is empty.
