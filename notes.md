@@ -1,52 +1,54 @@
 # Notes on Bash Programming
 ## Operators
-- ${< var >-< arg >} Returns arg if var not set
-:- ${< var >-< arg >} Returns arg if var not set OR empty
-= ${< var >=< arg >} Returns arg and sets var if var not set
-:= ${< var >:=< arg >} Returns arg and set var if var not set OR var empty
-+ ${< var >+< arg >} Returns arg if var is set if not returns nothing
-? ${< var >?< message >} Crashes process if var is not set
+* - ${< var >-< arg >} Returns arg if var not set
+* :- ${< var >-< arg >} Returns arg if var not set OR empty
+* = ${< var >=< arg >} Returns arg and sets var if var not set
+* := ${< var >:=< arg >} Returns arg and set var if var not set OR var empty
+* + ${< var >+< arg >} Returns arg if var is set if not returns nothing
+* ? ${< var >?< message >} Crashes process if var is not set
 
 ## Scope
 Variables are scoped to process.
-export will make a variable available to child processes.
+
+`export` will make a variable available to child processes.
 
 ## Arithematic
-expr < arg1> < mathematical operator > < arg2> 
-It should be noted that * will be interpreted and expanded.
-Safer way is
-$(( < arg1> < operator > < arg2> )) for return value.
-(( < var > = < arg1> < operator > < arg2> )) for assignment.
+* expr < arg1> < mathematical operator > < arg2> 
+* It should be noted that * will be interpreted and expanded.
+* Safer way is
+* $(( < arg1> < operator > < arg2> )) for return value.
+* (( < var > = < arg1> < operator > < arg2> )) for assignment.
 
 ## Declare
 Declare allows us to declare a bash variable, and type.
-declare -g < var > Makes var global
-declare -a < var > Types var to array
-declare -A < var > Types var to associatve array
-declare -i < var > Types var to integar, if set to arithematic string will evaluate string
-declare -l < var > Types var to all lowercase string
-declare -u < var > Types var to all uppercase string
-declare -r < var > Makes the var readonly and cannot be unset
-declare +x < var > Makes var available to child process
+* declare -g < var > Makes var global
+* declare -a < var > Types var to array
+* declare -A < var > Types var to associatve array
+* declare -i < var > Types var to integar, if set to arithematic string will evaluate string
+* declare -l < var > Types var to all lowercase string
+* declare -u < var > Types var to all uppercase string
+* declare -r < var > Makes the var readonly and cannot be unset
+* declare +x < var > Makes var available to child process
 
 ## Output Redirect
-0 STDIN - Standard In
-1 STDOUT - Standard Out
-2 STDERR - Standard Error
-dest < src Redirects standard in
-src > dest Redirects standard out
-M>&N Redirects one stream to other stream
+* 0 STDIN - Standard In
+* 1 STDOUT - Standard Out
+* 2 STDERR - Standard Error
+* dest < src Redirects standard in
+* src > dest Redirects standard out
+* M>&N Redirects one stream to other stream
 
 ## Processes
 command & will background command.
+
 wait < pid > will halt execution until process with given pid finishes. If pid is not provided execution will halt until all children process have finished.
 
 ## Pattern Matching
-* matches any string of any length
-? matches any single char
-[chars] matches any character in chars.
-[a-b] matches the specified range of characters.
-{< string1>,< string2>} is a set of strings. If multiple sets are combined it will produce the result of multiplying the sets.
+* * matches any string of any length
+* ? matches any single char
+* [chars] matches any character in chars.
+* [a-b] matches the specified range of characters.
+* {< string1>,< string2>} is a set of strings. If multiple sets are combined it will produce the result of multiplying the sets.
 
 ## Control Structures
 
